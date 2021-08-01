@@ -1,4 +1,4 @@
-import { Web3ReactProvider, useWeb3React } from '@web3-react/core';
+import { Web3ReactProvider } from '@web3-react/core';
 import { ethers } from "ethers";
 
 import './App.css';
@@ -11,8 +11,6 @@ function getLibrary(provider) {
 }
 
 function App() {
-  const web3React = useWeb3React();
-
   return (
     <Web3ReactProvider getLibrary={getLibrary}>
       <div className="App">
