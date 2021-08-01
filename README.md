@@ -1,3 +1,15 @@
+# Web3 React Starter
+
+This repo serves as a starter application for using and learning Web3 React and its various connectors.
+
+Moreover, it demonstrates use of hooks with components typical of a dapp (e.g. input HTML tags, output tags).
+
+Hopefully this make the use of Web3 React more clear for people ready to tackle a new dapp.
+
+All of the documentation below applies. For more information on Web3 React, please use the link below.
+
+https://github.com/NoahZinsmeister/web3-react
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
