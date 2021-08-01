@@ -16,10 +16,14 @@ export default function ConnectInjectedButton() {
     web3React.deactivate();
   }
 
+  function activeIsInjected() {
+    return web3React.account && web3React.connector instanceof InjectedConnector;
+  }
+
   return <div className="App-connector">
     <h2>Injected</h2>
-    <button onClick={initConnection}>{web3React.account ? 'Connected 🔗' : 'Activate 🔌'}</button>
-    { web3React.active &&
+    <button onClick={initConnection}>{activeIsInjected() ? 'Connected 🔗' : 'Activate 🔌'}</button>
+    { activeIsInjected() &&
     <button onClick={closeConnection}>Deactivate 👋</button>
     }
   </div>;

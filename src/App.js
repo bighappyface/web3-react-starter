@@ -4,6 +4,7 @@ import { ethers } from "ethers";
 import './App.css';
 import ConnectInfo from './components/ConnectInfo';
 import ConnectInjected from './components/ConnectInjected';
+import ConnectWalletConnect from './components/ConnectWalletConnect';
 
 function getLibrary(provider) {
   return new ethers.providers.Web3Provider(provider);
@@ -21,6 +22,7 @@ function App() {
           Test different connectors below
         </header>
         <ConnectInjected />
+        <ConnectWalletConnect />
         <ConnectInfo />
       </div>
     </Web3ReactProvider>

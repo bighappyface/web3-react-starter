@@ -1,21 +1,41 @@
 import { useWeb3React } from '@web3-react/core';
-import { InjectedConnector } from '@web3-react/injected-connector';
+import { WalletConnectConnector, UserRejectedRequestError  } from '@web3-react/walletconnect-connector';
 
-const injected = new InjectedConnector({ supportedChainIds: [42] });
+const wc = new WalletConnectConnector({
+  infuraId: "0168c4f5d973491daae8d12b05e2f051",
+  supportedChainIds: [1, 3, 4, 5, 42],
+  qrcode: true,
+  pollingInterval: 12000
+});
 
-export default function ConnectInjectedButton() {
+export default function ConnectWalletConnect() {
   const web3React = useWeb3React();
 
-  function initConnection() {
+  function handleError(error) {
 
-    web3React.activate(injected).then(acct => {
-      console.log(acct);
-    });
+    if (error instanceof UserRejectedRequestError) {
+      wc.handleDisconnect();
+    }
+
+  }
+
+  function initConnection() {
+    web3React.activate(wc, handleError);
+  }
+
+  function closeConnection() {
+    wc.close();
+  }
+
+  function activeIsWC() {
+    return web3React.account && web3React.connector instanceof WalletConnectConnector;
   }
 
   return <div className="App-connector">
-    <p>Chain Id: {web3React.chainId}</p>
-    <p>Account: {web3React.account}</p>
-    <button onClick={initConnection}>{web3React.account ? 'Connected' : 'Connect Injected'}</button>
+    <h2>Wallet Connect</h2>
+    <button onClick={initConnection}>{activeIsWC() ? 'Connected 🔗' : 'Activate 🔌'}</button>
+    { activeIsWC() &&
+    <button onClick={closeConnection}>Deactivate 👋</button>
+    }
   </div>;
 }
