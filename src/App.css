@@ -12,10 +12,19 @@
 
 .App-connector {
   background-color: #404753;
-  margin: 10px;
+  margin: 15px;
   padding: 10px;
 }
 
-.App-connector p {
+.App-connector h2 {
+  margin: 0 0 15px 0;
+}
+
+.App-connector button {
+  font-size: calc(10px + 1.2vmin);
+}
+
+.App p {
   font-size: calc(10px + 1vmin);
+  margin: 5px;
 }
