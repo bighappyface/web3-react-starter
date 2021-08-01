@@ -13,8 +13,6 @@ function getLibrary(provider) {
 function App() {
   const web3React = useWeb3React();
 
-  console.log('w3r', web3React);
-
   return (
     <Web3ReactProvider getLibrary={getLibrary}>
       <div className="App">
