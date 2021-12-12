@@ -147,15 +147,15 @@ In a separate terminal, run `npx hardhat node` to start a local chain.
 
 Run `npx hardhat run scripts/deploy-token.js --network localhost` to deploy the contract. **NOTE:** The contract address will be returned. Keep this for later.
 
-7. Run React app and connect to local chain
+# 7. Run React app and connect to local chain
 
 In a separate terminal, run `yarn start` to start a local web server with our React app on localhost:3000.
 
 Be sure to add a custom RPC to MetaMask (or other injected wallet).
 
-**Network Name:** Localhost 31337
-**New RPC URL:** http://localhost:8545
-**Chain ID:** 31337
+**Network Name:** Localhost 31337\
+**New RPC URL:** http://localhost:8545 \
+**Chain ID:** 31337\
 **Currency Symbol(Optional):** ETH
 
 Import a wallet pre-loaded with Ether on the local chain from the list of public/private keys. Usually Account #0 is the best with the following info:
@@ -173,3 +173,7 @@ Reset the Metamask account each time the chain is restarted
 * The nonce resets with the chain and metamask gets out of sync
 * MetaMask > Settings > Advanced > Reset Account
     * Do this for each account/wallet
+
+# 8. Build React component for minting
+
+See the details in `src/components/ERC1155Minter.js`

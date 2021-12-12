@@ -4,7 +4,7 @@ import { ethers } from "ethers";
 import './App.css';
 import ConnectInfo from './components/ConnectInfo';
 import ConnectInjected from './components/ConnectInjected';
-import ConnectWalletConnect from './components/ConnectWalletConnect';
+import ERC1155Minter from './components/ERC1155Minter';
 
 function getLibrary(provider) {
   return new ethers.providers.Web3Provider(provider);
@@ -15,11 +15,11 @@ function App() {
     <Web3ReactProvider getLibrary={getLibrary}>
       <div className="App">
         <header>
-          Test different connectors below
+          Test ERC-1155 minting below
         </header>
         <ConnectInjected />
-        <ConnectWalletConnect />
         <ConnectInfo />
+        <ERC1155Minter />
       </div>
     </Web3ReactProvider>
   );
