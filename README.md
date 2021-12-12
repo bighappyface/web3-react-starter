@@ -94,3 +94,13 @@ Run `yarn add hardhat` to install the latest version of Hardhat.
 Run `npx hardhat init` to setup the hardhat project in this repository. Selected "empty" template.
 
 Update `hardhat.config.js` to use Solidity version 0.8.9 (or higher).
+
+# OpenZeppelin
+
+This project uses the [OpenZeppelin](https://docs.openzeppelin.com/openzeppelin/) family of secure smart contracts that implement popular standards such as ERC-20, ERC-721, ERC-1155, etc.
+
+## Installation
+
+Run `yarn add @openzeppelin/contracts` to install the latest version of the smart contracts.
+
+The smart contracts are located at `node_modules/@openzeppelin/contracts`.
