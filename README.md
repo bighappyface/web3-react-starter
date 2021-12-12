@@ -132,3 +132,9 @@ This example will use the `ERC1155PresetMinterPauser` preset contract that expos
 Run `yarn add @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers` to install smart contract testing functionality in Hardhat.
 
 Run `npx hardhat test` to test the example ERC-1155 contract `mint` functionality.
+
+# 5. Setup Hardhat local chain and ERC-1155 contract artifacts
+
+Update `hardhat.config.js` to include the Hardhat local network with chain ID 31337. This will give us a unique local blockchain ID that we can run from the command line, deploy the ERC-1155 contract to, and connect to with our React app for minting.
+
+Update `hardhat.config.js` to change the artifacts directory to be within the `src` directory. This will allow us to use the contract ABIs with `ethers` within out React components so that we can call `mint` and other contract functions.

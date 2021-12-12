@@ -1,7 +1,8 @@
 import { useWeb3React } from '@web3-react/core';
 import { InjectedConnector } from '@web3-react/injected-connector';
 
-const injected = new InjectedConnector({ supportedChainIds: [1, 3, 4, 5, 42] });
+// Configured for all major networks and local node 31337
+const injected = new InjectedConnector({ supportedChainIds: [1, 3, 4, 5, 42, 31337] });
 
 export default function ConnectInjected() {
   const web3React = useWeb3React();
