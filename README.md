@@ -88,3 +88,9 @@ This project uses [https://hardhat.org/](Hardhat) for Ethereum smart contract de
 ## Installation
 
 Run `yarn add hardhat` to install the latest version of Hardhat.
+
+## Setup
+
+Run `npx hardhat init` to setup the hardhat project in this repository. Selected "empty" template.
+
+Update `hardhat.config.js` to use Solidity version 0.8.9 (or higher).
