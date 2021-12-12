@@ -138,3 +138,11 @@ Run `npx hardhat test` to test the example ERC-1155 contract `mint` functionalit
 Update `hardhat.config.js` to include the Hardhat local network with chain ID 31337. This will give us a unique local blockchain ID that we can run from the command line, deploy the ERC-1155 contract to, and connect to with our React app for minting.
 
 Update `hardhat.config.js` to change the artifacts directory to be within the `src` directory. This will allow us to use the contract ABIs with `ethers` within out React components so that we can call `mint` and other contract functions.
+
+# 6. Run local chain and deploy contract
+
+Run `npx hardhat clean` to clear our caches after artifacts directory change.
+
+In a separate terminal, run `npx hardhat node` to start a local chain.
+
+Run `npx hardhat run scripts/deploy-token.js --network localhost` to deploy the contract. **NOTE:** The contract address will be returned. Keep this for later.
