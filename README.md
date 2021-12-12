@@ -10,7 +10,7 @@ All of the documentation below applies. For more information on Web3 React, plea
 
 https://github.com/NoahZinsmeister/web3-react
 
-# Getting Started with Create React App
+# 1. Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -81,7 +81,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-# Hardhat
+# 2. Hardhat
 
 This project uses [https://hardhat.org/](Hardhat) for Ethereum smart contract development.
 
@@ -91,11 +91,27 @@ Run `yarn add hardhat` to install the latest version of Hardhat.
 
 ## Setup
 
-Run `npx hardhat init` to setup the hardhat project in this repository. Selected "empty" template.
+Run `npx hardhat init` to setup the hardhat project in this repository. Selected "basic project" template.
 
 Update `hardhat.config.js` to use Solidity version 0.8.9 (or higher).
 
-# OpenZeppelin
+### Basic Sample Hardhat Project
+
+This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+
+Try running some of the following tasks:
+
+```shell
+npx hardhat accounts
+npx hardhat compile
+npx hardhat clean
+npx hardhat test
+npx hardhat node
+node scripts/sample-script.js
+npx hardhat help
+```
+
+# 3. OpenZeppelin
 
 This project uses the [OpenZeppelin](https://docs.openzeppelin.com/openzeppelin/) family of secure smart contracts that implement popular standards such as ERC-20, ERC-721, ERC-1155, etc.
 
@@ -104,3 +120,15 @@ This project uses the [OpenZeppelin](https://docs.openzeppelin.com/openzeppelin/
 Run `yarn add @openzeppelin/contracts` to install the latest version of the smart contracts.
 
 The smart contracts are located at `node_modules/@openzeppelin/contracts`.
+
+# 4. Create basic ERC-1155 smart contract
+
+Create a new contract `contracts/ExampleERC1155Token.sol` that implements the OpenZeppelin ERC-1155 contract.
+
+This example will use the `ERC1155PresetMinterPauser` preset contract that exposes `mint` functionality along with other conventional needs like access control, pause, burn, etc.
+
+## Smart Contract Testing
+
+Run `yarn add @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers` to install smart contract testing functionality in Hardhat.
+
+Run `npx hardhat test` to test the example ERC-1155 contract `mint` functionality.
