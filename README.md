@@ -146,3 +146,30 @@ Run `npx hardhat clean` to clear our caches after artifacts directory change.
 In a separate terminal, run `npx hardhat node` to start a local chain.
 
 Run `npx hardhat run scripts/deploy-token.js --network localhost` to deploy the contract. **NOTE:** The contract address will be returned. Keep this for later.
+
+7. Run React app and connect to local chain
+
+In a separate terminal, run `yarn start` to start a local web server with our React app on localhost:3000.
+
+Be sure to add a custom RPC to MetaMask (or other injected wallet).
+
+**Network Name:** Localhost 31337
+**New RPC URL:** http://localhost:8545
+**Chain ID:** 31337
+**Currency Symbol(Optional):** ETH
+
+Import a wallet pre-loaded with Ether on the local chain from the list of public/private keys. Usually Account #0 is the best with the following info:
+
+```
+Account #0: 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266 (10000 ETH)
+Private Key: 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
+```
+
+Click the `Activate 🔌` button on the React app to connect to the local chain. Ensure that the correct wallet address and chain ID 31337 show on the page when connected.
+
+Here is a video covering the MetaMask/Hardhat setup - https://www.youtube.com/watch?v=FTDEX3S1eqU
+
+Reset the Metamask account each time the chain is restarted
+* The nonce resets with the chain and metamask gets out of sync
+* MetaMask > Settings > Advanced > Reset Account
+    * Do this for each account/wallet
