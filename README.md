@@ -80,3 +80,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# Hardhat
+
+This project uses [https://hardhat.org/](Hardhat) for Ethereum smart contract development.
+
+## Installation
+
+Run `yarn add hardhat` to install the latest version of Hardhat.
