@@ -1,0 +1,11 @@
+{
+  "attributes": [
+    { "trait_type": "breed", "value": "pug" },
+    { "trait_type": "color", "value": "white" },
+    { "trait_type": "collection", "value": "dogs" }
+  ],
+  "description": "Example dog metadata for an example contract",
+  "external_url": "",
+  "image": "https://storage.googleapis.com/opensea-prod.appspot.com/creature/2.png",
+  "name": "Dog #1"
+}

@@ -1,0 +1,11 @@
+{
+  "attributes": [
+    { "trait_type": "type", "value": "hairless" },
+    { "trait_type": "color", "value": "skin" },
+    { "trait_type": "collection", "value": "cats" }
+  ],
+  "description": "Example cat metadata for an example contract",
+  "external_url": "",
+  "image": "https://storage.googleapis.com/opensea-prod.appspot.com/creature/5.png",
+  "name": "Cat #2"
+}

@@ -1,0 +1,8 @@
+{
+  "name": "ExampleERC1155Token V2",
+  "description": "ExampleERC1155Token V2 contract used to demonstrate OS integration",
+  "image": "https://openseacreatures.io/image.png",
+  "external_link": "https://openseacreatures.io",
+  "seller_fee_basis_points": 100,
+  "fee_recipient": "0x91a9C879148AeC0b1c4C2CD737ffFc97F917b6fb"
+}
